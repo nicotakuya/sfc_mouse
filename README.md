@@ -1,6 +1,13 @@
 # sfc_mouse
 
-スーパーファミコン用のマウスの自作です。
+## overview
 
-回路図
+DIY super famicom mouse.
+
+## schematics
+
 https://sites.google.com/site/yugenkaisyanico/sfc-mouse
+
+## movie
+
+https://www.youtube.com/watch?v=29YaCk5Fr2Y
