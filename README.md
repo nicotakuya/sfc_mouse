@@ -2,12 +2,35 @@
 
 ## overview
 
-DIY super famicom mouse.
+・スーパーファミコンの自作マウスです。
 
-## schematics
+・アナログスティックで操作します。
 
-https://sites.google.com/site/yugenkaisyanico/sfc-mouse
+・「マリオペイント」「アルカノイド doh it again」で動作確認。
 
-## movie
+## Files
 
-https://www.youtube.com/watch?v=29YaCk5Fr2Y
+Arduino
+
+## 信号について
+
+・アナログスティックのX軸とY軸を0~1023カウントとして検出します。中心が約512カウントです。このままだと値が大きすぎるので、定数で割って送信しています。
+
+・P/S（ラッチ）がLow→High→Lowに変化するまで待ちます。
+
+・DAT（データ）から32ビットぶんのデータをスーファミ側に送信します。
+
+・CLK（クロック）がLow→Highの立ち上がりのタイミングで次のDATに切り替えます。最初の1ビット目ではCLKは元からHighのままです。
+
+・16ビット目のDATはLowである必要があります。これでゲームパッドかマウスかの判別を行っています。
+
+・17~23ビット目がY軸の移動量。24~32ビット目がX軸の移動量です。
+
+・X移動量範囲-127～+127。Y移動量範囲-127～+127。
+
+## Parts
+
+ATmega168/328P
+
+アナログジョイスティック
+
