@@ -1,8 +1,6 @@
-# sfc_mouse
-
+# DIY SFC mouse
 ## overview
-
-・スーパーファミコンの自作マウスです。
+・スーパーファミコン用の自作マウスです。
 
 ・アナログスティックで操作します。
 
@@ -10,7 +8,9 @@
 
 ## Files
 
-Arduino
+sfc_mouse.ino : Arduino用ソース。
+
+sfc_mouse_schematics.png : 回路図。
 
 ## 信号について
 
@@ -30,7 +30,7 @@ Arduino
 
 ## Parts
 
-ATmega168/328P
+・ATmega168/328P
 
-アナログジョイスティック
+・アナログジョイスティック
 
